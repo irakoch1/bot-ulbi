@@ -42,7 +42,7 @@ const start = async () => {
         const chatId = msg.chat.id;
         try {
             if (text === '/start') {
-                await UserModel.create({chatId})
+                await UserModel.sync({chatId})
                 await bot.sendSticker(chatId, 'https://sl.combot.org/temp_iv12g0a_5780361761_by_quotlybot/webp/5xf09f90b1.webp')
                 return bot.sendMessage(chatId, `Добро пожаловать в мой крутой телеграм бот`)
             }
